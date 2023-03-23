@@ -1,7 +1,8 @@
 # Input Variables
 
 variable "project_name" {
-  description = ""
+  description = "Project Name"
+
   type        = string
   default     = "Artists"
 }
@@ -42,7 +43,8 @@ variable "my_network" {
 }
 
 variable "ingress_specs" {
-  description = ""
+  description = "Port and Protocol for Ingress"
+
   type = object({
     port     = number
     protocol = string
@@ -55,7 +57,8 @@ variable "ingress_specs" {
 }
 
 variable "service_specs" {
-  description = ""
+  description = "Specification for ECS"
+
   type = object({
     name  = string
     image = string

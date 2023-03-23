@@ -56,7 +56,7 @@ resource "aws_security_group" "main" {
 
 resource "aws_vpc_security_group_ingress_rule" "ipv4_service_port" {
   security_group_id = aws_security_group.main.id
-  description       = "Allow TCP traffic from port 80 from your network"
+  description       = "Allow TCP traffic to service port from your network"
 
   cidr_ipv4   = var.my_network
   from_port   = var.ingress_specs.port
